@@ -18,11 +18,6 @@ void print_da_format(Da *arr)
 	printf("capacity = %zu\n", arr->capacity);
 }
 
-int double_n(int a)
-{
-	return a * 2;
-}
-
 int main(void) 
 {
 	Da arr;
@@ -48,15 +43,13 @@ int main(void)
 	print_da_format(&arr);
 	da_reverse(&arr);
 	print_da_format(&arr);
-	// da_map(&arr, double_n);
-	// print_da_format(&arr);
-	// printf("pop: %s\n", (char*)da_pop(&arr));
-	// print_da_format(&arr);
-	// da_unshift(&arr, "555");
-	// da_unshift(&arr, "666");
-	// print_da_format(&arr);
-	// da_shift(&arr);
-	// print_da_format(&arr);
+	printf("pop: %s\n", (char*)da_pop(&arr));
+	print_da_format(&arr);
+	da_unshift(&arr, "555");
+	da_unshift(&arr, "666");
+	print_da_format(&arr);
+	da_shift(&arr);
+	print_da_format(&arr);
 
 	da_destroy(&arr);
 	print_da_format(&arr);
